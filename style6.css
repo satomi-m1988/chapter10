@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #6c6b6b;
+}
+a {
+    text-decoration: none;
+}
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+header, nav, h2, .main-visual, footer {
+  font-family: chalkduster, "Bradley Hand", Courier, "Segoe Print", sans-serif;
+}
+
+header { /*レスポンシブ対応記述有り*/
+  position: relative;
+    width: 90%;
+    padding: 15px 0;
+    margin: 0 auto;
+    text-align: center;
+}
+header .headline{
+    font-size: 32px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.social { /*レスポンシブ対応記述有りdisplayをnoneにした*/
+  position: absolute;
+  top: 22px;
+  right: 22px;
+}
+
+.social i {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.nav-list { /*レスポンシブ対応記述有り*/
+    text-align: center;
+    padding: 10px 0;
+    margin: 0 auto;
+}
+.nav-list-item {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+}
+.main-visual {
+    width: 100%;
+    height: 300px;
+    background-image: url(img/mv.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.main-visual-content { /*レスポンシブ対応記述有り*/
+    width: 40%;
+    height: 300px;
+    background: rgba(0,0,0,0.5);
+    text-align: center;
+    padding-top: 105px;
+}
+.main-visual-text {
+    color: #fff;
+}
+.main-visual-name {
+    color: #fff;
+    margin-top: 30px;
+}
+main {  /*レスポンシブ対応記述有り*/
+    width: 800px;
+    margin: 0 auto;
+    padding: 70px 0;
+}
+.blog {  /*レスポンシブ対応記述有り*/
+    width: 540px;
+    float: left;
+    margin-right: 30px;
+}
+.blog-headline {
+    border-bottom: 8px solid #f7f7f7;
+    text-align: center;
+    line-height: 0.6;
+}
+.blog-box {  /*レスポンシブ対応記述有り paddingに関して記述有り*/
+    padding-top: 50px;
+}
+.blog-item {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #f7f7f7;
+}
+.blog-image {  /*レスポンシブ対応記述有り width49% */
+    float: left;
+    height: 180px;
+}
+.blog-text-headline {
+    padding-bottom: 15px;
+}
+.blog-text {  /*レスポンシブ対応記述有り width49% padding-top 5px*/
+    float: left;
+    padding: 30px 0 0 25px;
+}
+.blog-date {
+    display: inline-block;
+    font-size: 12px;
+}
+.category {
+    display: inline-block;
+    padding: 5px 8px;
+    background-color: #acabab;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 11px;
+}
+/* 第８章確認問題、ページネーション作成 */
+.pagination {  /*レスポンシブ対応記述有り margin-bottom50px */
+  text-align: center;
+  padding-top: 50px;
+}
+.pagination-text {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  color: white;
+  background-color: #acabab;
+  border-radius: 3px;
+  /*padding-left: 5px;
+  padding-right: 5px; 左右に余白これでは無い */
+  margin: 0 5px; /*左右に余白これが正解 */
+  line-height: 30px;
+}
+/* ここから８章 */
+.sidebar {  /*レスポンシブ対応記述有り padding-left3% padding-right3% width100%*/
+  width: 230px;
+  float: left;
+}
+/* ここはポピュラー、インスタ、カテゴリの下線・中央寄り・行の高さを設定している */
+.sidebar-headline, .instagram-headline, .categories-headline {
+    border-bottom: 8px solid #f7f7f7;
+    text-align: center;
+    line-height: 0.6;
+}
+/* ポピュラー・インスタ・カテゴリそれぞれの余白 */
+.sidebar-contents {
+    padding: 50px 0;
+}
+/* ポピュラーとカテゴリの文字の装飾 */
+.popular-text, .categories-text {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #f7f7f7;
+    margin-bottom: 5px;
+}
+
+.popular-text:last-child, .categories-text:last-child {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+/* インスタ部分の画像の装飾 */
+.instagram-box {  /*レスポンシブ対応記述有り width48% padding-top48% */
+    float: left;
+    width: 110px;
+    padding-top: 110px;
+    background-size: cover;
+    background-position: center;
+}
+.instagram-box:nth-child(odd) {  /*レスポンシブ対応記述有り margin-right4% */
+    margin: 0 10px 10px 0;
+}
+.instagram-box:nth-child(1) {
+    background-image: url(img/airport.jpg);
+}
+.instagram-box:nth-child(2) {
+    background-image: url(img/japan.jpg);
+}
+.instagram-box:nth-child(3) {
+    background-image: url(img/snow.jpg);
+}
+.instagram-box:nth-child(4) {
+    background-image: url(img/japan2.jpg);
+}
+.instagram-box:nth-child(5) {
+    background-image: url(img/lake.jpg);
+}
+.instagram-box:nth-child(6) {
+    background-image: url(img/road.jpg);
+}
+
+
+footer {
+  width: 100%;
+  height: 120px; 
+  text-align: center;
+  padding: 50px 0;
+  background-color: #848282;
+}
+.footer-text {
+    color: #fff;
+}
+
+@media screen and (max-width:425px) {
+  header {
+    width: 100%;
+  }
+
+  .nav-list {
+    width: 100%;
+  }
+
+  .sosial {
+    display: none;
+  }
+
+  .main-visual-content {
+    width: 100%;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  .blog {
+    width: 100%;
+    margin: 0;
+  }
+
+  .blog-box {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  .blog-image {
+    width: 49%;
+  }
+
+  .blog-text {
+    width: 49%;
+    padding-top: 5px;
+  }
+
+.sidebar {
+  width: 100%;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+.instagram-box {
+  width: 48%;
+  padding-top: 48%;
+}
+
+.instagram-box:nth-child(odd) {
+  margin-right: 4%;
+}
+
+.pagination {
+  margin-bottom: 50px;
+}
+}
